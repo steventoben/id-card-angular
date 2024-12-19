@@ -3,69 +3,71 @@
     <div class="header">
       <span class="id-logo">
         <h1>ID</h1>
-        <span><i class="fas fa-user icon icon-user"></i></span>
+        <span><i class="fas fa-user fa-lg icon icon-user"></i></span>
       </span>
-      <button (click)="toggleEditing()">Edit</button>
+      <button class="toggle-edit-button" (click)="toggleEditing()">
+        <i class="fas fa-xl icon icon-toggle-edit" [ngClass]="{'fa-pen': !isEditing(), 'fa-check': isEditing()}"></i>
+      </button>
     </div>
     <section class="section">
-      <h2 class="title">Account Information</h2>
+      <h2 class="title heading-2">Account Information</h2>
       <div class="account-info">
         <div class="name">
           <div class="info-item">
-            <span class="item-name">First Name</span>
-            <span>{{ idCard.firstName }}</span>
+            <span class="item-name heading-2">First Name</span>
+            <span class="body-1">{{ idCard.firstName }}</span>
           </div>
           <div class="info-item">
-            <span class="item-name">Last Name</span>
-            <span>{{ idCard.lastName }}</span>
+            <span class="item-name heading-2">Last Name</span>
+            <span class="body-1">{{ idCard.lastName }}</span>
           </div>
         </div>
         <div class="contact-info">
           <div class="info-item">
-            <span class="item-name">Registered Email</span>
-            <span class="information">{{ idCard.email }}</span>
+            <span class="item-name heading-2">Registered Email</span>
+            <span class="information body-1">{{ idCard.email }}</span>
           </div>
           <div class="info-item">
-            <span class="item-name">Cell Phone Number</span>
-            <span class="information">{{ idCard.phoneNumber }}</span>
+            <span class="item-name heading-2">Cell Phone Number</span>
+            <span class="information body-1">{{ idCard.phoneNumber }}</span>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="address">
-      <h2 class="title">Address</h2>
+      <h2 class="title heading-2">Address</h2>
       <div class="info">
         <div class="info-item">
-          <span class="item-name">Home Address</span>
-          <span>{{ idCard.homeAddress }}</span>
+          <span class="item-name heading-2">Home Address</span>
+          <span class="body-1">{{ idCard.homeAddress }}</span>
         </div>
         <div class="info-item">
-          <span class="item-name">Mailing Address</span>
-          <span>{{ idCard.mailingAddress }}</span>
+          <span class="item-name heading-2">Mailing Address</span>
+          <span class="body-1">{{ idCard.mailingAddress }}</span>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2 class="title">Personally Identifiable Information</h2>
+    <section class="section" id="pii">
+      <h2 class="title heading-2">Personally Identifiable Information</h2>
       <div class="info">
         <div class="info-item">
-          <span class="item-name">Social Security Numbers(SSNs)</span>
-          <span>{{ idCard.ssn }}</span>
+          <span class="item-name heading-2">Social Security Numbers(SSNs)</span>
+          <span class="body-1">{{ idCard.ssn }}</span>
         </div>
         <div class="info-item">
-          <span class="item-name">Date of Birth</span>
-          <span>{{idCard.dateOfBirth}}</span>
+          <span class="item-name heading-2">Date of Birth</span>
+          <span class="body-1">{{idCard.dateOfBirth}}</span>
         </div>
         <div class="info-item">
-          <span class="item-name">Medicare Beneficiary Identifiers (MBIs)</span>
-          <span>{{ idCard.mbi }}</span>
+          <span class="item-name heading-2">Medicare Beneficiary Identifiers (MBIs)</span>
+          <span class="body-1">{{ idCard.mbi }}</span>
         </div>
       </div>
     </section>
     <section class="section">
-      <h2 class="title">Documents</h2>
+      <h2 class="title heading-2">Documents</h2>
       @for (idCardDocument of idCard.documents; track idCardDocument.fileName) {
        <app-id-card-document [fileName]="idCardDocument.fileName" [documentType]="idCardDocument.documentType"/>
       }

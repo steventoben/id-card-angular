@@ -12,7 +12,7 @@ export const sampleIdCard: IdCard = {
   lastName: 'Moore',
   mailingAddress: '10th West, 456 Apple Street, Cleveland, OH 44127',
   mbi: '1EG4-TE5-MK73',
-  phoneNumber: '2168359545',
+  phoneNumber: '(216) 835-9545',
   ssn: '235-71-1083'
 
 };

@@ -26,6 +26,7 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0.5px;
+  color: var(--color-id-card-black);
 }
 .body-2 {
   font-size: 10px;
@@ -34,22 +35,29 @@
 }
 
 .id-card {
-  border: 1px solid var(--color-id-card-border);
+  //border: 2px solid transparent;//var(--color-id-card-border);
+  border: 2px solid var(--color-id-card-green);//var(--color-id-card-border);
   &.edit-mode {
-    border: 1px dotted var(--color-id-card-rust);
+    border: 2px dashed var(--color-id-card-rust);
+    background-color: transparent;
   }
 }
 
 .id-card {
   //background-color: blue;
   background-color: rgba(255, 243, 236, 0.75);
-  padding: 2rem;
-  margin: 0 auto;
+  padding: 0rem 2rem;
+  margin: 1rem auto 0 auto;
   //max-width: fit-content;
   max-width: 60rem;
+  transition: background-color 150ms ease;
 
-  border: 1px transparent solid;
+  //border: 1px transparent solid;
   border-radius: 0.5rem;
+  @media screen and (max-width: 30em){
+    padding: 0.25rem;
+    width: 100%;
+  }
 }
 .section > h2.title {
   font-family: 'Jost';
@@ -69,18 +77,25 @@ h1 {
 }
 .account-info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  //grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: 2fr 3fr;
+  @media screen and (max-width: 50em){
+    grid-template-columns: 1fr;
+  }
+  //grid-template-columns: 2fr 3fr;
 }
 .item-name {
   font-weight: bold;
+  color: var(--color-id-card-black);
   //margin-right: 1rem;
 }
 .information {
   //margin-right: 1rem;
   text-align: right;
+  color: var(--color-id-card-black);
 }
 .id-card[data-editing="true"] {
-  border: 1px dashed red;
+  border: 2px dashed red;
 }
 .id-card {
   &.content {}
@@ -105,11 +120,38 @@ h1 {
     grid-template-columns: 1fr 2fr;
   }
 }
+.section#pii > .info > .info-item {
+  //grid-template-columns: 1fr 5fr;//20% 80%;
+
+  //small screens -> 1fr 2fr
+  //grid-template-columns: 1fr 2fr;//20% 80%;
+  @media screen and (max-width: 30em){
+    grid-template-columns: 50% 50%//1fr 2fr;
+  }
+}
+.section {
+  margin-bottom: 2rem;
+}
 .info-item {
   display: grid;
-  grid-template-columns: 1fr 2fr;//40% 50%
+  //grid-template-columns: 1fr 2fr;//40% 50%
+  grid-template-columns: 40% 50%;
   justify-items: start;
   align-items: center;
+
+  @media screen and (max-width: 50em){
+    grid-template-columns: 30% 50%;
+  }
+
+  margin-bottom: 0.5rem;
+}
+.info-item > span:last-child {
+  margin-left: 0.5rem;
+  @media screen and (max-width: 30em){
+    margin-left: 0.25rem;
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
 }
 .id-logo {
   display: inline-flex;
@@ -117,7 +159,21 @@ h1 {
   align-items: center;
 }
 
-.icon {}
+.toggle-edit-button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  & > i.icon {
+    color: var(--color-id-card-rust);
+  }
+}
+
+.icon {
+  //width: 3rem;
+  //height: 3rem;
+  //display: flex;
+}
 .icon-user {
   color: var(--color-id-card-rust);
+  margin-left: 0.5rem;
 }
