@@ -1,3 +1,9 @@
+import {IdCardDocument} from '../id-card-document/id-card-document.interface';
+
+/*
+interface used to represent an ID card.
+contains all necessary fields as shown in Figma example
+ */
 export interface IdCard {
   firstName: string;
   lastName: string;
@@ -8,10 +14,5 @@ export interface IdCard {
   ssn: string;
   dateOfBirth: string;
   mbi: string;
-  documents: IdCardDocument[];
-}
-interface IdCardDocument {
-  //fileName: string;
-  fileName: string;
-  documentType: 'png' | 'doc';
+  documents: IdCardDocument[]; //array of IdCardDocument used to represent documents/files
 }

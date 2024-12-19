@@ -1,5 +1,6 @@
 <div class="document-card">
   <div class="image">
+    <!--if statement to change svg value based on type of document (png or doc as in example)-->
     @if (documentType === "png") {
       <svg class="file-icon file-icon-png" width="51" height="56" viewBox="0 0 51 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity="0.3">
@@ -80,6 +81,11 @@
     </svg>
     }
   </div>
+  <!--To copy the behavior of overflow in the example,
+      the fileName and documentType are seperated and
+      the fileName is given an ellipsis style overflow,
+      while the document type/file extension always shows at the end
+      instead of being cut off-->
   <div class="document-name body-2">
     <span class="file-name">{{fileName.substring(0, fileName.lastIndexOf('.'))}}</span>
     <span class="file-extension">{{fileName.substring(fileName.lastIndexOf('.'))}}</span>

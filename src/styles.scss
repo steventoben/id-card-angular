@@ -2,7 +2,8 @@
 :root {
   --color-bg-chat-bg: linear-gradient(to bottom, #f8f8f8, #cbd7d0);
   --color-bg-id-card-bg-hex: #fff3ec;
-  --color-bg-id-card-bg: opacify(var(--color-bg-id-card-bg-hex), 0.75);
+  //--color-bg-id-card-bg: opacify(var(--color-bg-id-card-bg-hex), 0.75);
+  --color-bg-id-card-bg: rgba(255, 243, 236, 0.75);
   --color-bg-file-bg: #497d7e;
   --color-id-card-rust: #b95319;
   --color-id-card-green: #96ad90;

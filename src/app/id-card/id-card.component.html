@@ -5,7 +5,9 @@
         <h1>ID</h1>
         <span><i class="fas fa-user fa-lg icon icon-user"></i></span>
       </span>
+      <!--button binds onClick event to toggleEditing function so clicking the button toggles edit mode state-->
       <button class="toggle-edit-button" (click)="toggleEditing()">
+        <!--dynamically change icon by changing class names based on isEditing signal value-->
         <i class="fas fa-xl icon icon-toggle-edit" [ngClass]="{'fa-pen': !isEditing(), 'fa-check': isEditing()}"></i>
       </button>
     </div>
@@ -68,6 +70,8 @@
     </section>
     <section class="section">
       <h2 class="title heading-2">Documents</h2>
+      <!--loop through documents of id card and map to app-id-card-document component
+          use the file name of document as unique key-->
       @for (idCardDocument of idCard.documents; track idCardDocument.fileName) {
        <app-id-card-document [fileName]="idCardDocument.fileName" [documentType]="idCardDocument.documentType"/>
       }

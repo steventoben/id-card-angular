@@ -7,6 +7,10 @@ import {Component, Input} from '@angular/core';
   styleUrl: './id-card-document.component.scss'
 })
 export class IdCardDocumentComponent {
+  /*
+  file name and file type are inputs so when IdCard documents are read in for loop
+  they can be passed to this component as input values/props
+   */
   @Input() fileName: string = '';
   @Input() documentType: string = '';
   constructor() {

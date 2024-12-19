@@ -1,5 +1,7 @@
 import {IdCard} from './id-card.interface';
 
+//constant IdCard used as a placeholder/sample
+//this variable contains all the field values used in the Figma example
 export const sampleIdCard: IdCard = {
   dateOfBirth: '05/09/1998',
   documents: [
