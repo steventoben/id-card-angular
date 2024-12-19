@@ -5,10 +5,65 @@
         <h1>ID</h1>
         <span><i class="fas fa-user"></i></span>
       </span>
+      <button>Edit</button>
     </div>
-    <section></section>
-    <section></section>
-    <section></section>
+    <section class="section">
+      <h2 class="title">Account Information</h2>
+      <div class="account-info">
+        <div class="name">
+          <div class="info-item">
+            <span class="item-name">First Name</span>
+            <span>{{ idCard.firstName }}</span>
+          </div>
+          <div class="info-item">
+            <span class="item-name">Last Name</span>
+            <span>{{ idCard.lastName }}</span>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="item-name">Registered Email</span>
+            <span class="information">{{ idCard.email }}</span>
+          </div>
+          <div class="info-item">
+            <span class="item-name">Cell Phone Number</span>
+            <span class="information">{{ idCard.phoneNumber }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="address">
+      <h2 class="title">Address</h2>
+      <div class="info">
+        <div class="info-item">
+          <span class="item-name">Home Address</span>
+          <span>{{ idCard.homeAddress }}</span>
+        </div>
+        <div class="info-item">
+          <span class="item-name">Mailing Address</span>
+          <span>{{ idCard.mailingAddress }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="title">Personally Identifiable Information</h2>
+      <div class="info">
+        <div class="info-item">
+          <span class="item-name">Social Security Numbers(SSNs)</span>
+          <span>{{ idCard.ssn }}</span>
+        </div>
+        <div class="info-item">
+          <span class="item-name">Date of Birth</span>
+          <span>{{idCard.dateOfBirth}}</span>
+        </div>
+        <div class="info-item">
+          <span class="item-name">Medicare Beneficiary Identifiers (MBIs)</span>
+          <span>{{ idCard.mbi }}</span>
+        </div>
+      </div>
+    </section>
     <section>
       @for (idCardDocument of idCard.documents; track idCardDocument.fileName) {
        <app-id-card-document [fileName]="idCardDocument.fileName" [documentType]="idCardDocument.documentType"/>
