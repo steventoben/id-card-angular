@@ -1,11 +1,11 @@
-<article class="id-card" >
+<article class="id-card" [ngClass]="{'edit-mode': isEditing()}">
   <div class="content">
     <div class="header">
       <span class="id-logo">
         <h1>ID</h1>
-        <span><i class="fas fa-user"></i></span>
+        <span><i class="fas fa-user icon icon-user"></i></span>
       </span>
-      <button>Edit</button>
+      <button (click)="toggleEditing()">Edit</button>
     </div>
     <section class="section">
       <h2 class="title">Account Information</h2>
@@ -64,7 +64,8 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="section">
+      <h2 class="title">Documents</h2>
       @for (idCardDocument of idCard.documents; track idCardDocument.fileName) {
        <app-id-card-document [fileName]="idCardDocument.fileName" [documentType]="idCardDocument.documentType"/>
       }

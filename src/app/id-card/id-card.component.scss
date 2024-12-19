@@ -39,3 +39,85 @@
     border: 1px dotted var(--color-id-card-rust);
   }
 }
+
+.id-card {
+  //background-color: blue;
+  background-color: rgba(255, 243, 236, 0.75);
+  padding: 2rem;
+  margin: 0 auto;
+  //max-width: fit-content;
+  max-width: 60rem;
+
+  border: 1px transparent solid;
+  border-radius: 0.5rem;
+}
+.section > h2.title {
+  font-family: 'Jost';
+  color: var(--color-id-card-rust);
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+h1 {
+  font-family: 'Jost';
+  color: var(--color-id-card-rust);
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+.account-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+.item-name {
+  font-weight: bold;
+  //margin-right: 1rem;
+}
+.information {
+  //margin-right: 1rem;
+  text-align: right;
+}
+.id-card[data-editing="true"] {
+  border: 1px dashed red;
+}
+.id-card {
+  &.content {}
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content > .section {
+  & > .title {}
+  & > .info {
+    & > .info-item {}
+  }
+}
+.section#address > .info > .info-item {
+  grid-template-columns: 1fr 5fr;//20% 80%;
+
+  //small screens -> 1fr 2fr
+  //grid-template-columns: 1fr 2fr;//20% 80%;
+  @media screen and (max-width: 50em){
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.info-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;//40% 50%
+  justify-items: start;
+  align-items: center;
+}
+.id-logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {}
+.icon-user {
+  color: var(--color-id-card-rust);
+}
