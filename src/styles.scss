@@ -1,8 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* global styles */
 :root {
   --color-bg-chat-bg: linear-gradient(to bottom, #f8f8f8, #cbd7d0);
   --color-bg-id-card-bg-hex: #fff3ec;
-  //--color-bg-id-card-bg: opacify(var(--color-bg-id-card-bg-hex), 0.75);
   --color-bg-id-card-bg: rgba(255, 243, 236, 0.75);
   --color-bg-file-bg: #497d7e;
   --color-id-card-rust: #b95319;
@@ -18,7 +17,6 @@
   --font-weight-medium: 500;
 }
 .heading-1 {
-  //  font-size: 2.25rem;
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 0;
@@ -31,6 +29,7 @@
   font-weight: var(--font-weight-bold);
 }
 .body-1 {
+  color: var(--color-id-card-black);
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0.5px;

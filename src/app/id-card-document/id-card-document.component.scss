@@ -12,9 +12,6 @@
   & > .image {}
   & > .document-name {
     display: inline-flex;
-    //max-width: 2rem;
-    /*overflow: hidden;
-    white-space: nowrap;*/
     & > .file-name {
       overflow: hidden;
       white-space: nowrap;
@@ -22,7 +19,4 @@
       max-width: calc(5rem - (0.75rem * 2));
     }
   }
-}
-.file-icon {
-  fill: var(--color-icon-charcoal-blue) !important;
 }
