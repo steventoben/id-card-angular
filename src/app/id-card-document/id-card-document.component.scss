@@ -1,14 +1,13 @@
 .document-card {
   padding: 0.75rem;
-  border: 1px solid var(--color-bg-file-bg);
-  border-radius: 0.5rem;
+  border: 1px solid var(--color-file-bc);
+  background-color: var(--color-file-bg);
+  border-radius: var(--icon-br);
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  max-width: 5rem;
-  min-width: 5rem;
+  width: var(--icon-width);
   margin-right: 1rem;
-  background-color: white;
   & > .image {}
   & > .document-name {
     display: inline-flex;
@@ -16,7 +15,8 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      max-width: calc(5rem - (0.75rem * 2));
+      //total width minus padding on each side
+      max-width: calc(var(--icon-width) - (0.75rem * 2));
     }
   }
 }

@@ -1,5 +1,7 @@
 /* global styles */
 :root {
+
+  //taken from figma design system
   --color-bg-chat-bg: linear-gradient(to bottom, #f8f8f8, #cbd7d0);
   --color-bg-id-card-bg-hex: #fff3ec;
   --color-bg-id-card-bg: rgba(255, 243, 236, 0.75);
@@ -9,13 +11,23 @@
   --color-id-card-black: #232c27;
   --color-icon-charcoal-blue: #2f4858;
 
-  --color-id-card-border: #888888;
+
+  //taken from figma properties
+
+  --color-file-bc: #232C27;
+  --color-file-bg: #FDFDFB;
+  --color-id-card-shadow: 0 4px 48px 0 #B953190D;
+  --icon-width: 83px;
+  --icon-br: 12px;
+  --id-card-width: 950px;
 
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
 }
+//these typography styles are used globally throughout app,
+//so they're defined here in global styles file
 .heading-1 {
   font-size: 28px;
   line-height: 34px;
@@ -41,6 +53,8 @@
   letter-spacing: 0.5px;
   font-weight: var(--font-weight-medium);
 }
+
+//couple of reset styles on body and all button selectors
 body {
   font-family: 'Jost';
   box-sizing: border-box;

@@ -3,9 +3,10 @@
   background-color: var(--color-bg-id-card-bg);
   padding: 0rem 2rem;
   margin: 1rem auto 0 auto;
-  max-width: 60rem;
+  max-width: var(--id-card-width);
   transition: background-color 150ms ease;
   border-radius: 0.5rem;
+  box-shadow: var(--color-id-card-shadow);
 
   &.edit-mode {
     border: 2px dashed var(--color-id-card-rust);
@@ -24,6 +25,8 @@
   letter-spacing: 0;
   font-weight: 700;
 }
+//targets the 'ID' h1 use.
+//only a single h1 is used throughout the app
 h1 {
   color: var(--color-id-card-rust);
   font-size: 28px;
@@ -34,6 +37,7 @@ h1 {
 .account-info {
   display: grid;
   grid-template-columns: 2fr 3fr;
+  //on small viewports transition from two columns to one
   @media screen and (max-width: 50em){
     grid-template-columns: 1fr;
   }
@@ -46,10 +50,8 @@ h1 {
   text-align: right;
   color: var(--color-id-card-black);
 }
-.id-card[data-editing="true"] {
-  border: 2px dashed red;
-}
 
+//header containing 'ID' and edit button
 .header {
   display: flex;
   justify-content: space-between;
@@ -57,22 +59,22 @@ h1 {
 }
 
 .section#address > .info > .info-item {
-  grid-template-columns: 1fr 5fr;//20% 80%;
+  grid-template-columns: 1fr 5fr;
 
   //small screens -> 1fr 2fr
-  //grid-template-columns: 1fr 2fr;//20% 80%;
   @media screen and (max-width: 50em){
     grid-template-columns: 1fr 2fr;
   }
 }
 .section#pii > .info > .info-item {
-
+  //change on very small viewports (such as phones)
   @media screen and (max-width: 40em){
-    grid-template-columns: 40% 50%//1fr 2fr;
+    grid-template-columns: 40% 50%
   }
 
+  //smallest viewport media query
   @media screen and (max-width: 30em){
-    grid-template-columns: 50% 50%//1fr 2fr;
+    grid-template-columns: 50% 50%
   }
 
   & > span:last-child {
@@ -91,7 +93,6 @@ h1 {
   @media screen and (max-width: 50em){
     grid-template-columns: 30% 50%;
   }
-
   margin-bottom: 0.5rem;
 }
 .info-item > span:last-child {
@@ -99,7 +100,6 @@ h1 {
   @media screen and (max-width: 30em){
     margin-left: 0.25rem;
     overflow-wrap: break-word;
-    overflow-wrap: anywhere;
   }
 }
 .id-logo {

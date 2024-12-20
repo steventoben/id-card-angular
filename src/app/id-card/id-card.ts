@@ -16,5 +16,4 @@ export const sampleIdCard: IdCard = {
   mbi: '1EG4-TE5-MK73',
   phoneNumber: '(216) 835-9545',
   ssn: '235-71-1083'
-
 };
