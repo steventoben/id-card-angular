@@ -1,13 +1,10 @@
 .burger-menu {
-  //position: absolute;
-  //left: 1rem;
-  //top: 1rem;
   padding: 1rem;
+}
+.icon-burger {
+  color: var(--color-icon-charcoal-blue);
 }
 .app-container {
   padding-bottom: 2rem;
   background: var(--color-bg-chat-bg);
-  @media screen and (max-width: 50em){
-    //background-color: blue;
-  }
 }
