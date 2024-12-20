@@ -9,7 +9,7 @@
   box-shadow: var(--color-id-card-shadow);
 
   &.edit-mode {
-    border: 0.5px dashed var(--color-id-card-rust);
+    border: 4px dashed var(--color-id-card-rust);
     background-color: transparent;
   }
 
